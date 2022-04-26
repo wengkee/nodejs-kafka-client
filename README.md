@@ -1,1 +1,3 @@
-# nodejs-kafka-client
+
+# References
+https://kafka.js.org/docs/getting-started
