@@ -1,25 +1,21 @@
 # KafkaJS Demo
 
+
 ## Quickstart
-* to start a KafkaJS Producer
+This Docker compose file will start a Zookeeper, Kafka Broker, a KafkaJS producer and a consumer
 ```shell
-cd producer
-node producer.js
-```
-* to start a KafkaJS Consumer
-```shell
-cd  consumer
-node consumer.js
+docker-compose up -d
 ```
 
-## Docker Image
-Go to consumer folder and do the below, similar step to be repeated for producer
+
+---
+
+
+## Build Docker Image
+Go to consumer folder and do the below. Repeat similar steps for producer
 ```
+cd consumer
 docker build . -t username/kafkajs-consumer
-
-docker tag username/kafkajs-consumer quay.io/username/kafkajs-consumer
-
-docker push quay.io/username/kafkajs-consumer 
 ```
 
 Note: For ARM64 M1, use the `docker build` command below instead
@@ -27,6 +23,9 @@ Note: For ARM64 M1, use the `docker build` command below instead
 # ARM64
 docker buildx build --platform linux/amd64 . -t username/kafkajs-consumer
 ```
+
+---
+
 
 # References
 https://kafka.js.org/docs/getting-started
